@@ -1,16 +1,35 @@
+package Lab09AED;
+
 public class Main {
     public static void main(String[] args) {
-        BTree<Integer> bTree = new BTree<>(4);
-
-        // Claves para insertar en el árbol
-        int[] keys = {31, 19, 12, 41, 57, 63, 3, 10, 13, 16, 22, 25, 28, 33, 38, 40, 49, 52, 55, 60, 62, 67, 70, 72};
-
-        // Insertar las claves en el árbol
-        for (int key : keys) {
-            bTree.insert(key);
+        BTree<Integer> bTree = new BTree<>(3);
+        try {
+            bTree.insert(5);
+            bTree.insert(6);
+            bTree.insert(12);
+            bTree.insert(7);
+            bTree.insert(17);
+            
+            // Probando el método search
+            System.out.println("Search for key 7: " + bTree.search(7));
+            System.out.println("Search for key 17: " + bTree.search(17));
+            System.out.println("Search for key 20: " + bTree.search(20));
+            
+            System.out.println("Before removal:");
+            System.out.println(bTree);
+            
+            // Eliminando algunas claves
+            bTree.remove(7);
+            bTree.remove(12);
+            bTree.remove(20); // Intentando eliminar una clave que no está en el árbol
+            
+            System.out.println("After removal:");
+            System.out.println(bTree);
+        } catch (ItemDuplicated e) {
+            System.out.println(e.getMessage());
         }
-
-        // Mostrar el árbol
-        System.out.println(bTree.toString());
     }
 }
+
+
+
