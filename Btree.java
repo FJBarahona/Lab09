@@ -1,10 +1,8 @@
-package Lab09AED;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class BTree<E extends Comparable<E>> {
+public class BTree <E extends Comparable<E>> {
     private BNode<E> root;
     private int order;
     private boolean up;

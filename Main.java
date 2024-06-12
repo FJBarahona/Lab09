@@ -1,5 +1,3 @@
-package Lab09AED;
-
 public class Main {
     public static void main(String[] args) {
         BTree<Integer> bTree = new BTree<>(3);

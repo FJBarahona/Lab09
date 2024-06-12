@@ -1,5 +1,3 @@
-package Lab09AED;
-
 import java.io.IOException;
 
 public class Test {

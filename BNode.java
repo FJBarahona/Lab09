@@ -1,5 +1,3 @@
-package Lab09AED;
-
 import java.util.ArrayList;
 
 class BNode<E extends Comparable<E>> {
